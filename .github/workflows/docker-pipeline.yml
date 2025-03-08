@@ -1,0 +1,19 @@
+name: docker-pipeline-praveen
+on: push
+jobs:
+  docker-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print your Register Number
+        run: echo "Hello world - 22it033"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Docker Build
+        run: docker build -t praveen33g/ml-model-22it033 .
+
+      - name: Docker Images
+        run: docker images
+      
+    
